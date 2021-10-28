@@ -1,0 +1,19 @@
+{
+    "name": "Dark Side Extension",
+    "description": "Change webpages to a dark theme and back",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["Content.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_name": "Dark Side Extension",
+        "default_chrext": "chrext.html"
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}
