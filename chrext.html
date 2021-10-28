@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    Hello
+
+<style>
+    body {
+        min-width: 300px;
+        text-align: center;
+    } 
+    h1 {
+        font-family: 'Roboto Mono', monospace;
+    }
+    .red {
+        color:crimson;
+    }
+    .blue {
+        color: blue;
+    }
+    p,
+    .button {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.2rem;
+        /* align-items: center; */
+    }
+
+    .button {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 2.4rem;
+        width: 5.0rem;
+        border: black;
+    }
+    .row{
+        padding:0 0.25rem;
+        pointer-events: none;
+    }
+</style>
+
+<body class="Content">
+    <h1>
+        <span class="black"> Which side will you choose? The Dark Side or the Light?</span>
+    </h1>
+    <p><span class="red">Dark Side</span>
+        <span class="red"> or </span>
+        <span class="blue">Light</span>
+    </p>
+
+    <div class="button">
+        <div class="row">On</div>  
+        <div class="row">Off</div>
+    </div>
 </body>
+<script src="./Content.js"></script>
 </html>

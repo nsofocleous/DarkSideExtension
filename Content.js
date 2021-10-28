@@ -1,6 +1,41 @@
-//document.getElementsByTagName("body")[0].style = "background-color: black";
-//document.getElementsByTagName("p")[0].style = "color: white";
+if(document.querySelector(".Content")){
+    const button = document.querySelector(".button");
 
-//If button is on, darken background, and play sound sample
+    let buttonSelected = false;
 
-//If button is off, reverse changes, and play sound sample
+    button.addEventListener("click", () => {
+        if(!buttonSelected){
+            buttonSelected = true;
+            chrome.tabs.executeScript({
+                file: "appOn.js"
+            })
+            //document.querySelector("html").style.filter = "invert(1) hue-rotate(180deg)";
+            //let media = document.querySelectorAll("img, picture, video");
+            //media.forEach((item) => {
+            //    item.style.filter = "invert(1) hue-rotate(180deg)";
+            //});
+        }
+        else {
+            buttonSelected = false;
+            chrome.tabs.executeScript({
+                file: "appOff.js"
+            })
+            //document.querySelector("html").style.filter = "invert(0) hue-rotate(0deg)";
+        }
+    });
+};
+// let vaderTheme = document.createElement('audio');
+// vaderTheme.id       = 'audio-player';
+// vaderTheme.controls = 'controls';
+// vaderTheme.src      = 'vaderTheme.mp3';
+// sound.type     = 'audio/mpeg';
+// document.getElementById('').appendChild(sound);
+
+
+
+
+
+
+
+
+
